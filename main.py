@@ -4,6 +4,11 @@ from tkinter import Tk, Canvas
 from ctypes import windll
 
 
+# TODO When the program is run, it may be stuck in an endless loop, this hasn't yet been properly looked at
+# It is most likely where the entire maze hasn't been filled out but there aren't any "legal paths" that can be added
+# If this is the case a solution would be to loop over the maze creation process, starting again if it gets "stuck"
+
+
 def separated(p1, p2, sep):
     """
     :param p1: The square being checked as a start or end point in the maze
